@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatwametro Dinámico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <button class="menu-btn" id="menu-button">☰</button>
+        <h1>Tatwametro</h1>
+    </header>
+
+    <div class="tatwa-box">
+        <h2 id="tatwa-name">Cargando...</h2>
+        <img id="tatwa-image" src="" alt="Tatwa Imagen">
+        <p id="tatwa-description"></p>
+
+        <!-- Indicador radial de progreso -->
+        <svg id="radial-progress" width="120" height="120">
+            <circle class="progress-bg" cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.3)" stroke-width="10"
+                fill="none" />
+            <circle class="progress-bar" cx="60" cy="60" r="50" stroke="white" stroke-width="10" fill="none"
+                stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="314" stroke-dashoffset="314" />
+        </svg>
+
+        <p id="countdown"></p>
+        <button class="more-info-btn" onclick="openModal()">Más información</button>
+    </div>
+
+    <!-- Modal de información detallada -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- Menú hamburguesa -->
+    <nav id="menu" class="menu">
+        <ul>
+            <li><button onclick="setManualSunrise()">⏰ Hora de salida</button></li>
+            <li><button onclick="getTatwa()">🔄 Actualizar Tatwa</button></li>
+            <li><button onclick="toggleSound()">🔊 Activar/Desactivar sonido</button></li>
+            <li><button onclick="changeSound()">🎵 Cambiar sonido</button></li>
+            <li><a href="tatwas.html">📖 Ver todos los Tatwas</a></li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
