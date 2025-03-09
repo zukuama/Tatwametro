@@ -80,12 +80,12 @@ async function getTatwa() {
 
         // Cargar imagen con respaldo
         const imgElement = document.getElementById("tatwa-image");
-        let imagePath = `img/${currentTatwa.image}`;
+        let imagePath = `.img/${currentTatwa.image}`;
         imgElement.onerror = function () {
-            imagePath = `img/${currentTatwa.image.replace('.webp', '.png')}`;
+            imagePath = `.img/${currentTatwa.image.replace('.webp', '.png')}`;
             imgElement.src = imagePath;
             imgElement.onerror = function () {
-                imgElement.src = "img/default.png";
+                imgElement.src = ".img/default.png";
                 imgElement.alt = "Imagen no disponible";
             };
         };
