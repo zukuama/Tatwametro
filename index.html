@@ -19,19 +19,16 @@
         <img id="tatwa-image" src="" alt="Tatwa Imagen">
         <p id="tatwa-description"></p>
 
-        <!-- Indicador radial de progreso -->
-        <svg id="radial-progress" width="120" height="120">
-            <circle class="progress-bg" cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.3)" stroke-width="10"
-                fill="none" />
-            <circle class="progress-bar" cx="60" cy="60" r="50" stroke="white" stroke-width="10" fill="none"
-                stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="314" stroke-dashoffset="314" />
-        </svg>
+        <div class="time-info">
+            ⏰ <strong>Inicio:</strong> <span id="start-time">--:--</span><br>
+            🕛 <strong>Finaliza:</strong> <span id="end-time">--:--</span><br>
+            ⏳ <strong>Tiempo restante:</strong> <span id="countdown">--:--</span>
+        </div>
 
-        <p id="countdown"></p>
         <button class="more-info-btn" onclick="openModal()">Más información</button>
     </div>
 
-    <!-- Modal de información detallada -->
+    <!-- Modal de Información del Tatwa actual -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -47,11 +44,37 @@
             <li><button onclick="getTatwa()">🔄 Actualizar Tatwa</button></li>
             <li><button onclick="toggleSound()">🔊 Activar/Desactivar sonido</button></li>
             <li><button onclick="changeSound()">🎵 Cambiar sonido</button></li>
+            <li><button onclick="openCalculatorModal()">🔢 Calcular Tatwa Personal</button></li>
             <li><a href="tatwas.html">📖 Ver todos los Tatwas</a></li>
         </ul>
     </nav>
 
-    <script src="script.js"></script>
+    <!-- Modal para la Calculadora Tatwa Personal -->
+    <div id="calculator-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCalculatorModal()">&times;</span>
+            <h2>Calculadora Tatwa Personal</h2>
+            <label for="birth-date">Fecha de Nacimiento:</label>
+            <input type="date" id="birth-date" required>
+            <label for="birth-time">Hora de Nacimiento:</label>
+            <input type="time" id="birth-time" required>
+            <button onclick="calculateTatwa()">Calcular</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/images.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/tatwa.js"></script>
+    <script src="js/sunrise.js"></script>
+    <script src="js/calc-modal.js"></script>
+    <script src="js/calc-sunrise.js"></script>
+    <script src="js/calc-tatwa.js"></script>
+    <script src="js/tatwas.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
