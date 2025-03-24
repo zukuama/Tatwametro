@@ -48,7 +48,7 @@ function setManualSunrise() {
 async function getTatwa() {
     try {
         const tatwas = [
-            { name: "Akash", color: "#000000", image: "akash.webp", description: "Elemento del éter, expansión y espiritualidad." },
+            { name: "Akash", color: "#000000", image: "akasha.webp", description: "Elemento del éter, expansión y espiritualidad." },
             { name: "Vayu", color: "#3366cc", image: "vayu.webp", description: "Elemento del aire, movimiento y creatividad." },
             { name: "Tejas", color: "#ff6666", image: "tejas.webp", description: "Elemento del fuego, transformación y energía." },
             { name: "Prithvi", color: "#ffcc66", image: "prithvi.webp", description: "Elemento de la tierra, estabilidad y fortaleza." },
