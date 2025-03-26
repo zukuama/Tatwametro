@@ -4,21 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tatwas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Los Tatwas</title>
+    <link rel="stylesheet" href="css/stylesTatwas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
-        <a href="index.html" class="back-btn">← Volver</a>
-        <h1>Lista de Tatwas</h1>
+        <h1>Explora los Tatwas</h1>
+        <a href="index.html" class="home-button" title="Página en Blanco">
+            <i class="fas fa-home"></i>
+        </a>
     </header>
-
-    <div class="tatwa-container">
-        <ul id="tatwa-list"></ul>
-    </div>
-
-    <script src="js/tatwas.js"></script>
+    <main class="container">
+        <a href="html/akasha.html" class="card" style="--tatwa-color: #333333; --tatwa-bg-color: #e0e0e0;">
+            <div class="card-content">
+                <h2>Akasha (Éter)</h2>
+            </div>
+            <div class="card-icon">
+                <img src="img/iconoTatwa/akasha.png" alt="Icono Akasha">
+            </div>
+        </a>
+        <a href="html/vayu.html" class="card" style="--tatwa-color: #00FFFF; --tatwa-bg-color: #e0ffff;">
+            <div class="card-content">
+                <h2>Vayu (Aire)</h2>
+            </div>
+            <div class="card-icon">
+                <img src="img/iconoTatwa/vayu-aire.png" alt="Icono Vayu">
+            </div>
+        </a>
+        <a href="html/tejas.html" class="card" style="--tatwa-color: #FF0000; --tatwa-bg-color: #ffe0e0;">
+            <div class="card-content">
+                <h2>Tejas (Fuego)</h2>
+            </div>
+            <div class="card-icon">
+                <img src="img/iconoTatwa/tejas-fuego.png" alt="Icono Tejas">
+            </div>
+        </a>
+        <a href="html/prithivi.html" class="card" style="--tatwa-color: #FFFF00; --tatwa-bg-color: #ffffe0;">
+            <div class="card-content">
+                <h2>Prithivi (Tierra)</h2>
+            </div>
+            <div class="card-icon">
+                <img src="img/iconoTatwa/prithivi-tierra.png" alt="Icono Prithivi">
+            </div>
+        </a>
+        <a href="html/apas.html" class="card" style="--tatwa-color: #FFFFFF; --tatwa-bg-color: #f0f8ff;">
+            <div class="card-content">
+                <h2>Apas (Agua)</h2>
+            </div>
+            <div class="card-icon">
+                <img src="img/iconoTatwa/apas-agua.png" alt="Icono Apas">
+            </div>
+        </a>
+        <a href="html/prana.html" class="card gray-card">
+            <div class="card-content">
+                <h2>Prana</h2>
+            </div>
+        </a>
+        <a href="html/tatwasInfo.html" class="card gray-card">
+            <div class="card-content">
+                <h2>Tatwa Info</h2>
+            </div>
+        </a>
+        <a href="html/metodos.html" class="card gray-card">
+            <div class="card-content">
+                <h2>Métodos</h2>
+            </div>
+        </a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Explorando los Tatwas</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

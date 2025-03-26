@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!tatwaList) return; // Evita errores si el elemento no existe
 
     const tatwas = [
-        { name: "Akash", color: "#000000", description: "Elemento del éter, expansión y espiritualidad." },
+        { name: "Akasha", color: "#000000", description: "Elemento del éter, expansión y espiritualidad." },
         { name: "Vayu", color: "#3366cc", description: "Elemento del aire, movimiento y creatividad." },
         { name: "Tejas", color: "#ff6666", description: "Elemento del fuego, transformación y energía." },
         { name: "Prithvi", color: "#ffcc66", description: "Elemento de la tierra, estabilidad y fortaleza." },

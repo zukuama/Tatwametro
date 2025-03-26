@@ -1,7 +1,7 @@
 async function getTatwa(useManualTime = false) {
     try {
         const tatwas = [
-            { name: "Akash", color: "#000000", image: "akash", description: "Elemento del éter, expansión y espiritualidad." },
+            { name: "Akash", color: "#000000", image: "akasha", description: "Elemento del éter, expansión y espiritualidad." },
             { name: "Vayu", color: "#3366cc", image: "vayu", description: "Elemento del aire, movimiento y creatividad." },
             { name: "Tejas", color: "#ff6666", image: "tejas", description: "Elemento del fuego, transformación y energía." },
             { name: "Prithvi", color: "#ffcc66", image: "prithvi", description: "Elemento de la tierra, estabilidad y fortaleza." },
