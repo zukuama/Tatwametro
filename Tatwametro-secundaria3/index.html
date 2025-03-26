@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatwametro Dinámico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <button class="menu-btn" id="menu-button">☰</button>
+        <h1>Tatwametro</h1>
+    </header>
+
+    <div class="tatwa-box">
+        <h2 id="tatwa-name">Cargando...</h2>
+        <img id="tatwa-image" src="" alt="Tatwa Imagen">
+        <p id="tatwa-description"></p>
+
+        <div class="time-info">
+            ⏰ <strong>Inicio:</strong> <span id="start-time">--:--</span><br>
+            🕛 <strong>Finaliza:</strong> <span id="end-time">--:--</span><br>
+            ⏳ <strong>Tiempo restante:</strong> <span id="countdown">--:--</span>
+        </div>
+
+        <button class="more-info-btn" onclick="openModal()">Más información</button>
+    </div>
+
+    <!-- Modal de Información del Tatwa actual -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- Menú hamburguesa -->
+    <nav id="menu" class="menu">
+        <ul>
+            <li><button onclick="setManualSunrise()">⏰ Hora de salida</button></li>
+            <li><button onclick="getTatwa()">🔄 Actualizar Tatwa</button></li>
+            <li><button onclick="toggleSound()">🔊 Activar/Desactivar sonido</button></li>
+            <li><button onclick="changeSound()">🎵 Cambiar sonido</button></li>
+            <li><button onclick="openCalculatorModal()">🔢 Calcular Tatwa Personal</button></li>
+            <li><a href="tatwas.html">📖 Ver todos los Tatwas</a></li>
+        </ul>
+    </nav>
+
+    <!-- Modal para la Calculadora Tatwa Personal -->
+    <div id="calculator-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCalculatorModal()">&times;</span>
+            <h2>Calculadora Tatwa Personal</h2>
+            <label for="birth-date">Fecha de Nacimiento:</label>
+            <input type="date" id="birth-date" required>
+            <label for="birth-time">Hora de Nacimiento:</label>
+            <input type="time" id="birth-time" required>
+            <button onclick="calculateTatwa()">Calcular</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/images.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/tatwa.js"></script>
+    <script src="js/sunrise.js"></script>
+    <script src="js/calc-modal.js"></script>
+    <script src="js/calc-sunrise.js"></script>
+    <script src="js/calc-tatwa.js"></script>
+    <script src="js/tatwas.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

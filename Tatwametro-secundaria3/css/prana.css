@@ -1,0 +1,31 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 0.95em;
+    }
+}

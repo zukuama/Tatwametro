@@ -1,0 +1,201 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #333; /* Fondo gris oscuro por defecto para index.html */
+    color: #f4f4f4; /* Color de texto claro por defecto */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos específicos para el body de las páginas individuales */
+body.tatwa-page {
+    color: #000; /* Color de texto negro para las páginas de Tatwas */
+}
+
+body.tatwa-page.prithivi {
+    background-color: #FFFF00; /* Amarillo para Prithivi */
+}
+
+body.tatwa-page.apas {
+    background-color: #FFFFFF; /* Blanco para Apas */
+}
+
+body.tatwa-page.tejas {
+    background-color: #FF0000; /* Rojo para Tejas */
+}
+
+body.tatwa-page.vayu {
+    background-color: #00FFFF; /* Cian para Vayu */
+}
+
+body.tatwa-page.akasha {
+    background-color: #333333; /* Gris oscuro para Akasha (se mantiene igual) */
+    color: #f4f4f4; /* Mantener texto claro para Akasha */
+}
+
+header {
+    background-color: #555; /* Un tono más claro para el header sobre el fondo oscuro */
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Estilos para la página principal */
+.container.index {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px; /* Separación horizontal entre las cards */
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Color de fondo pastel aplicado dinámicamente con CSS variables */
+    background-color: var(--tatwa-bg-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease-in-out;
+    border-left: 5px solid var(--tatwa-color); /* Indicador de color */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-content h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.card-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Estilos para las páginas individuales */
+.container.tatwa-info {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente para legibilidad */
+    border-radius: 8px;
+}
+
+.container.tatwa-info h1 {
+    text-align: center;
+    margin-top: 0;
+    color: inherit; /* Hereda el color del body */
+}
+
+.container.tatwa-info h3 {
+    margin-top: 1.5em;
+    color: inherit; /* Hereda el color del body */
+}
+
+.container.tatwa-info p, .container.tatwa-info ul {
+    line-height: 1.6;
+    color: #000; /* Asegurar texto negro en la información */
+}
+
+.eter-relation {
+    margin-top: 2em;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo del botón de volver */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #777;
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 20px;
+    background-color: #555;
+    color: #fff;
+}
+
+/* Estilos para hacerlo responsivo */
+@media (max-width: 600px) {
+    .container.index {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-icon {
+        margin-top: 10px;
+    }
+}
+
+/* Estilo para el botón de inicio en el header */
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: #777;
+}
+
+.home-button i {
+    margin-right: 0; /* Elimina el margen derecho del icono si no hay texto */
+}
+
+/* Estilo para las tarjetas grises */
+.card.gray-card {
+    background-color: #cccccc; /* Color gris claro */
+    border-left: 5px solid #888888; /* Borde gris más oscuro */
+    color: #333; /* Color de texto oscuro */
+}
+
+.card.gray-card:hover {
+    background-color: #d9d9d9; /* Un tono más claro al pasar el mouse */
+}

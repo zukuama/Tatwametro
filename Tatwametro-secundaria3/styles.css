@@ -1,0 +1,192 @@
+/* --- ESTILOS GENERALES --- */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  transition: background-color 1.5s ease-in-out;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* --- CABECERA Y MENÚ --- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- MENÚ HAMBURGUESA --- */
+.menu {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  border-radius: 0 10px 10px 0;
+  z-index: 9;
+}
+.menu.active {
+  display: flex;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  margin-bottom: 10px;
+}
+.menu button,
+.menu a {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+}
+.menu a {
+  text-decoration: none;
+  display: block;
+}
+
+/* --- CAJA DEL TATWA --- */
+.tatwa-box {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 60px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.tatwa-box h2 {
+  margin: 0;
+  font-size: 22px;
+}
+.tatwa-box img {
+  max-width: 200px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* --- INFORMACIÓN DE TIEMPOS --- */
+.time-info {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* --- BOTONES --- */
+button {
+  background: #ffcc00;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+button:hover {
+  background: #ffdd33;
+}
+
+/* --- MODAL --- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  color: black;
+}
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* --- CALCULADORA TATWA (MODAL) --- */
+#calculator-modal .modal-content {
+  width: 90%;
+  max-width: 350px;
+}
+#calculator-modal input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#calculator-modal button {
+  width: 100%;
+}
+
+/* --- LISTA DE TATWAS (tatwas.html) --- */
+.tatwa-container {
+  padding: 20px;
+  text-align: center;
+}
+#tatwa-list {
+  list-style: none;
+  padding: 0;
+}
+.tatwa-item {
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+.tatwa-item:hover {
+  transform: scale(1.05);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .tatwa-box,
+  .modal-content {
+    width: 95%;
+  }
+}
